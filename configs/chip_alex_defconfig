@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2015.05-gfc52202-dirty Configuration
+# Buildroot 2015.05-g71d67f2 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOSTARCH_NEEDS_IA32_LIBS=y
@@ -371,6 +371,7 @@ BR2_PACKAGE_LSOF=y
 # BR2_PACKAGE_LTTNG_BABELTRACE is not set
 # BR2_PACKAGE_LTTNG_MODULES is not set
 # BR2_PACKAGE_LTTNG_TOOLS is not set
+# BR2_PACKAGE_RTL8723BS is not set
 # BR2_PACKAGE_MEMSTAT is not set
 # BR2_PACKAGE_NETPERF is not set
 # BR2_PACKAGE_OPROFILE is not set
@@ -1012,7 +1013,7 @@ BR2_PACKAGE_SQLITE=y
 #
 # Graphics
 #
-BR2_PACKAGE_AALIB=y
+# BR2_PACKAGE_AALIB is not set
 # BR2_PACKAGE_ATK is not set
 # BR2_PACKAGE_BULLET is not set
 # BR2_PACKAGE_CAIRO is not set
@@ -1426,10 +1427,7 @@ BR2_PACKAGE_BC=y
 # BR2_PACKAGE_BCUSDK is not set
 # BR2_PACKAGE_BIND is not set
 # BR2_PACKAGE_BLUEZ_UTILS is not set
-
-#
-# bluez5-utils needs a toolchain w/ wchar, threads, headers >= 3.4, dynamic library
-#
+# BR2_PACKAGE_BLUEZ5_UTILS is not set
 # BR2_PACKAGE_BMON is not set
 # BR2_PACKAGE_BOA is not set
 # BR2_PACKAGE_BRIDGE_UTILS is not set
