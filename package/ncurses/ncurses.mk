@@ -4,7 +4,8 @@
 #
 ################################################################################
 
-NCURSES_VERSION = 5.9
+NCURSES_VERSION = 6.0
+NCURSES_ABI_VERSION = 6
 NCURSES_SITE = $(BR2_GNU_MIRROR)/ncurses
 NCURSES_INSTALL_STAGING = YES
 NCURSES_DEPENDENCIES = host-ncurses
@@ -95,7 +96,6 @@ NCURSES_LINK_STAGING_LIBS = \
 NCURSES_LINK_STAGING_PC = $(call NCURSES_LINK_PC,$(STAGING_DIR))
 
 NCURSES_CONF_OPTS += --enable-ext-colors
-NCURSES_ABI_VERSION = 6
 define NCURSES_INSTALL_TARGET_256_COLORS_TERMINFO
 	cp -dpf $(STAGING_DIR)/usr/share/terminfo/x/xterm+256color $(TARGET_DIR)/usr/share/terminfo/x
 	cp -dpf $(STAGING_DIR)/usr/share/terminfo/x/xterm-256color $(TARGET_DIR)/usr/share/terminfo/x
@@ -103,9 +103,6 @@ endef
 
 NCURSES_POST_INSTALL_STAGING_HOOKS += NCURSES_LINK_STAGING_LIBS
 NCURSES_POST_INSTALL_STAGING_HOOKS += NCURSES_LINK_STAGING_PC
-
-else # BR2_PACKAGE_NCURSES_WCHAR
-NCURSES_ABI_VERSION = 5
 endif # BR2_PACKAGE_NCURSES_WCHAR
 
 ifneq ($(BR2_ENABLE_DEBUG),y)
